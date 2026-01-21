@@ -68,6 +68,11 @@ rbacPolicy:
   - "g, group:default/developers, role:default/workflowUser"
   - "g, group:default/platformengineers, role:default/workflowAdmin"
 
+  - "p, role:default/platformengineers, lightspeed.chat.read, read, allow"
+  - "p, role:default/platformengineers, lightspeed.chat.create, create, allow"
+  - "p, role:default/platformengineers, lightspeed.chat.delete, delete, allow"
+  - "g, user:default/platformengineers, role:default/"
+
 rbacConditionalPolicies:
   - result: CONDITIONAL
     roleEntityRef: 'role:default/location_read_developer'
